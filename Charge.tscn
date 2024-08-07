@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://conuosbva7g25"]
-
-[ext_resource type="Script" path="res://charge.gd" id="1_e88kt"]
-
-[node name="Charge" type="Area2D"]
-script = ExtResource("1_e88kt")

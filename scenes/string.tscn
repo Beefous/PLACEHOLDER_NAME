@@ -1,0 +1,95 @@
+[gd_scene load_steps=4 format=3 uid="uid://bsd1prafivwe0"]
+
+[ext_resource type="Texture2D" uid="uid://cabhovb7odwlx" path="res://assets/sprites/string segement.png" id="1_05rg5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a18rv"]
+radius = 0.5
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vpwjf"]
+size = Vector2(1, 4)
+
+[node name="string" type="Node2D"]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+collision_layer = 0
+collision_mask = 0
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource("CircleShape2D_a18rv")
+
+[node name="PinJoint2D5" type="PinJoint2D" parent="."]
+node_a = NodePath("../RigidBody2D")
+node_b = NodePath("../stringSegement")
+softness = 16.0
+
+[node name="stringSegement" type="RigidBody2D" parent="."]
+position = Vector2(0, 2)
+collision_layer = 0
+collision_mask = 0
+mass = 0.01
+
+[node name="StringSegement" type="Sprite2D" parent="stringSegement"]
+texture = ExtResource("1_05rg5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stringSegement"]
+shape = SubResource("RectangleShape2D_vpwjf")
+
+[node name="PinJoint2D4" type="PinJoint2D" parent="."]
+position = Vector2(0, 4)
+node_a = NodePath("../stringSegement")
+node_b = NodePath("../stringSegement2")
+softness = 16.0
+
+[node name="stringSegement2" type="RigidBody2D" parent="."]
+position = Vector2(0, 6)
+collision_layer = 0
+mass = 0.01
+gravity_scale = 0.695
+
+[node name="StringSegement" type="Sprite2D" parent="stringSegement2"]
+texture = ExtResource("1_05rg5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stringSegement2"]
+shape = SubResource("RectangleShape2D_vpwjf")
+
+[node name="PinJoint2D3" type="PinJoint2D" parent="."]
+position = Vector2(0, 8)
+node_a = NodePath("../stringSegement2")
+node_b = NodePath("../stringSegement3")
+softness = 16.0
+
+[node name="stringSegement3" type="RigidBody2D" parent="."]
+position = Vector2(0, 10)
+collision_layer = 0
+mass = 0.01
+gravity_scale = 0.543
+
+[node name="StringSegement" type="Sprite2D" parent="stringSegement3"]
+texture = ExtResource("1_05rg5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stringSegement3"]
+shape = SubResource("RectangleShape2D_vpwjf")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="."]
+position = Vector2(0, 12)
+node_a = NodePath("../stringSegement3")
+node_b = NodePath("../stringSegement4")
+softness = 16.0
+
+[node name="stringSegement4" type="RigidBody2D" parent="."]
+position = Vector2(0, 14)
+collision_layer = 0
+mass = 0.01
+gravity_scale = 0.238
+
+[node name="StringSegement" type="Sprite2D" parent="stringSegement4"]
+texture = ExtResource("1_05rg5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stringSegement4"]
+shape = SubResource("RectangleShape2D_vpwjf")
+
+[node name="PinJoint2D2" type="PinJoint2D" parent="."]
+position = Vector2(0, 16)
+node_a = NodePath("../stringSegement4")
+softness = 16.0
