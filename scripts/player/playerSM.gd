@@ -20,7 +20,7 @@ var last_floor = false  # Last frame's on-floor state
 var jump_buffer = Timer.new()
 var buffer_frames = 6
 
-func _init(_owner: Character2d):
+func _init(_owner: Character2D):
 	my_owner = _owner
 
 func on_ready():

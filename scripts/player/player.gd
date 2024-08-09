@@ -1,7 +1,8 @@
-extends Character2d
+extends Character2D
 
 @onready var direction = $direction
 @onready var cursor = $direction/Cursor
+@onready var sprite = $AnimatedSprite2D
 
 var jump_mult := 2.0
 var twist_input: float

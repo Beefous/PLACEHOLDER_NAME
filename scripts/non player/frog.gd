@@ -1,4 +1,4 @@
-extends Character2d
+extends Character2D
 
 var jump_interval: float
 var jump_mult: float

@@ -1,7 +1,6 @@
 extends CharacterBody2D
-class_name Character2d
+class_name Character2D
 
-@onready var sprite = $AnimatedSprite2D
 
 var gravity = GlobalFunctions.gravity
 @export_range(0.0, 2.0, .25) var friction := 1.0

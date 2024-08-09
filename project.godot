@@ -26,7 +26,6 @@ window/size/viewport_width=768
 window/size/viewport_height=768
 window/stretch/mode="viewport"
 window/stretch/aspect="keep_height"
-mouse_cursor/custom_image="res://assets/sprites/mouse.png"
 
 [input]
 

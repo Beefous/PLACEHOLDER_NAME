@@ -27,7 +27,7 @@ func _particle_init():
 	particles.amount = 10
 	particles.lifetime = 10
 	particles.preprocess = 10
-	particles.texture = load("res://string segement.png")
+	particles.texture = load("res://assets/sprites/string segement.png")
 	particles.gravity = Vector2.ZERO
 	particles.angular_velocity_min = 5
 	particles.angular_velocity_max = 15
